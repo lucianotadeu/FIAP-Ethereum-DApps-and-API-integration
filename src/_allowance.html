@@ -1,0 +1,43 @@
+<table style="width:100%; border:none">
+	<colgroup>
+		<col width="20%"/>
+		<col width="60%"/>
+		<col width="20%"/>
+	</colgroup>
+	<body>
+		<tr>
+			<td>
+				<label>Owner addres</label>
+			</td>
+			<td >
+				<input id="ownerAddress" type="text" class="form-control" placeholder="Owner address..." required="" style="width:75%;"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Spender address</label>
+			</td>
+			<td >
+				<input id="spenderAddress" type="text" class="form-control" placeholder="Spender Address"  required="" style="width:95%;"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Allowed value</label>
+			</td>
+			<td>
+				<label id="allowedValue" style="font-size: 2rem; color:blue"></lab>
+			</td>
+		</tr>
+	</body>
+</table>
+
+<script type="text/javascript">	
+	$(function() {
+        fnAnima('View Allowance');
+		$('#btnConfirm').unbind('click').bind("click", ( () => {
+			if(addressValid($("#ownerAddress").val()) && addressValid($("#ownerAddress").val()))
+				getAllowance($("#ownerAddress").val(), $("#spenderAddress").val());
+		}));
+	})
+</script>

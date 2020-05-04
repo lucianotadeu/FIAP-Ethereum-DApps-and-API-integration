@@ -1,0 +1,35 @@
+<table style="width:100%; border:none">
+	<colgroup>
+		<col width="20%"/>
+		<col width="60%"/>
+		<col width="20%"/>
+	</colgroup>
+	<body>
+		<tr>
+			<td>
+				<label>Address</label>
+			</td>
+			<td >
+					<input id="address" type="text" class="form-control" placeholder="Address..." required="" style="width:75%;"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Balance value</label>
+			</td>
+			<td>
+				<label id="balanceValue" style="font-size: 2rem; color:blue"></lab>
+			</td>
+		</tr>
+	</body>
+</table>
+
+<script type="text/javascript">	
+	$(function() {
+        fnAnima('View Balance Of');
+		$('#btnConfirm').unbind('click').bind("click", ( () => {
+			if(addressValid($("#address").val()))
+				getBalanceOf($("#address").val());
+		}));
+	})
+</script>

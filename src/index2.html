@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>FIAP DApp - Token</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>  
+    
+    <script src="./index.js"></script>    
+  </head>
+
+<body class="container-fluid">
+
+    <h1 class="page-header">FIAP DApp - Token</h1>
+
+    <div class="row">
+        <div>
+            <h3 class="sub-header">Gravar informação</h3>
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <table class="table" id="info-table">
+                        <tr>
+                            <td><label for="newInfo">Informação:</label> </td>
+                            <td>
+                                <input class="form-control" id="newInfo">
+                            </td>                          
+                        </tr>
+                    </table>
+                </div>
+                <a href="#" onclick="newRegister()" class="btn btn-primary">Registrar</a>
+            </form>
+        </div>
+    </div>    
+
+    <div class="row">
+        <div>
+            <h3 class="sub-header">Verificar última informação registrada</h3>
+            <form class="form-inline" role="form">
+                <a href="#" onclick="getName()" class="btn btn-primary">Verificar</a>
+                <div class="form-group">
+                    <table class="table" id="info-table">
+                        <tr>
+                            <td>Name:</td>
+                            <td>
+                                <label id="name">
+                            </td>                          
+                        </tr>
+                    </table>
+                </div>                
+            </form>
+        </div>
+    </div> 
+
+    <BR/><BR/>
+ 
+  </body>
+</html>

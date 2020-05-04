@@ -1,0 +1,36 @@
+<table style="width:100%; border:none">
+	<colgroup>
+		<col width="20%"/>
+		<col width="60%"/>
+		<col width="20%"/>
+	</colgroup>
+	<body>
+		<tr>
+			<td>
+				<label>address to</label>
+			</td>
+			<td >
+					<input id="addressTo" type="text" class="form-control" placeholder="Owner address..." required="" style="width:75%;"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Value</label>
+			</td>
+			<td>
+				<input id="value" type="text" class="form-control" placeholder="value..." required="" style="width:75%;"/>
+			</td>
+		</tr>
+	</body>
+</table>
+
+<script type="text/javascript">	
+	$(function() {
+        fnAnima('Mint Token');
+		$('#btnConfirm').unbind('click').bind("click", ( () => {
+			if(addressValid($("#addressTo").val()))
+				if(valueValid($("#value").val()))
+					setMintTo($("#addressTo").val(),$("#value").val());
+		}));
+	})
+</script>

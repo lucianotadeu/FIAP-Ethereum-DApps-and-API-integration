@@ -1,0 +1,36 @@
+<table style="width:100%; border:none">
+	<colgroup>
+		<col width="20%"/>
+		<col width="60%"/>
+		<col width="20%"/>
+	</colgroup>
+	<body>
+		<tr>
+			<td>
+				<label>Spender address</label>
+			</td>
+			<td>
+				<input id="spenderAddress" type="text" class="form-control" placeholder="address..." required="" style="width:75%;"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Subtracted Value</label>
+			</td>
+			<td >
+				<input id="value" type="number" class="form-control" placeholder="value..." required="" style="width:25%;"/>
+			</td>
+		</tr>
+	</body>
+</table>
+
+<script type="text/javascript">
+	$(function() {
+        fnAnima('Decrease Allowance');
+		$('#btnConfirm').unbind('click').bind("click", ( () => {
+			if(addressValid($("#spenderAddress").val()))
+				if(valueValid($("#value").val()))
+					SetDecreaseAllowance($("#spenderAddress").val(),$("#value").val());
+		}));
+	})
+</script>

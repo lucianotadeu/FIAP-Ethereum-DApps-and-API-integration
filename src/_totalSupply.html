@@ -1,0 +1,26 @@
+<table style="width:100%; border:none">
+	<colgroup>
+		<col width="20%"/>
+		<col width="60%"/>
+		<col width="20%"/>
+	</colgroup>
+	<body>
+		<tr>
+			<td>
+				<label>Total Supply</label>
+			</td>
+			<td>
+				<label id="tokenTotalSupply" style="font-size: 2rem; color:blue"></lab>
+			</td>
+		</tr>
+	</body>
+</table>
+
+<script type="text/javascript">	
+	$(function() {
+        fnAnima('Token Total Supply');
+		$('#btnConfirm').unbind('click').bind("click", ( () => {
+				getTotalSupply();
+		}));
+	})
+</script>

@@ -13,9 +13,9 @@
   "author": "LUCIANO TADEU PEREIRA E ADONAI MARTINHO MOREIRA",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lucianotadeu/FIAP-Ethereum-DApps-and-API-integration.git"
+    "url": "https://github.com/lucianotadeu"
   },
-  "homepage": "https://github.com/lucianotadeu/FIAP-Ethereum-DApps-and-API-integration.git",
+  "homepage": "https://github.com/lucianotadeu/FIAP-Ethereum-DApps-and-API-integration/blob/master/README.md",
   "dependencies": {
     "express": "^4.17.1",
     "web3": "^1.2.6"

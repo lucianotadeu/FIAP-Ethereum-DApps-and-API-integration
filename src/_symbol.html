@@ -1,0 +1,26 @@
+<table style="width:100%; border:none">
+	<colgroup>
+		<col width="20%"/>
+		<col width="60%"/>
+		<col width="20%"/>
+	</colgroup>
+	<body>
+		<tr>
+			<td>
+				<label>Token Symbol</label>
+			</td>
+			<td>
+				<label id="tokenSymbol" style="font-size: 2rem; color:blue"></lab>
+			</td>
+		</tr>
+	</body>
+</table>
+
+<script type="text/javascript">	
+	$(function() {
+        fnAnima('Token Symbol');
+		$('#btnConfirm').unbind('click').bind("click", ( () => {
+				getSymbol();
+		}));
+	})
+</script>

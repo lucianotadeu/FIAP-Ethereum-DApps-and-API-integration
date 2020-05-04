@@ -1,0 +1,44 @@
+<table style="width:100%; border:none">
+	<colgroup>
+		<col width="20%"/>
+		<col width="60%"/>
+		<col width="20%"/>
+	</colgroup>
+	<body>
+		<tr>
+			<td>
+				<label>Transfer from</label>
+			</td>
+			<td>
+				<input id="transferFromAddress" type="text" class="form-control" placeholder="address..." required="" style="width:75%;"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Transfer to</label>
+			</td>
+			<td>
+				<input id="transferToAddress" type="text" class="form-control" placeholder="address..." required="" style="width:75%;"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Value</label>
+			</td>
+			<td >
+				<input id="value" type="number" min="0" class="form-control" placeholder="value..." maxlength="50" required="required" style="width:25%;"/>
+			</td>
+		</tr>
+	</body>
+</table>
+
+<script type="text/javascript">
+	$(function() {
+        fnAnima('Transfer From');
+		$('#btnConfirm').unbind('click').bind("click", ( () => {
+			if(addressValid($("#transferFromAddress").val() && $("#transferToAddress").val()))
+				if(valueValid($("#value").val()))
+					SetTransferFrom($("#transferFromAddress").val(),$("#transferToAddress").val(),$("#value").val());
+		}));
+	})
+</script>
