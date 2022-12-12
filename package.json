@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/lucianotadeu/FIAP-Ethereum-DApps-and-API-integration/blob/master/README.md",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "web3": "^1.2.6"
   }
 }
